@@ -1,0 +1,13 @@
+import telebot
+
+bot = telebot.TeleBot('8741229213:AAGgH2JXZGHZQPT44Psy6tmPNRV2k3x2D9M')
+
+@bot.message_handler(commands=['start'])
+def start(msg: telebot.types.Message):
+    bot.reply_to(
+        msg,
+        'Olá! Eu sou um bot de exemplo. Como posso ajudar você hoje?'
+    )
+
+# iniciar o polling **fora** dos handlers
+bot.infinity_polling()

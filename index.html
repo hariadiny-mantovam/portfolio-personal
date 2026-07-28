@@ -1,235 +1,343 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hariadiny Mantovam</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hari Mantovam | Contabilidade Estratégica & Gestão de Negócios</title>
+  
+  <!-- Google Fonts: Playfair Display & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Ícones do Lucide -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-dark navbar-custom">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">HM</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <!-- ...existing code... -->
-<ul class="navbar-nav ms-auto">
-  <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-  <li class="nav-item"><a class="nav-link" href="#projetos">Projetos</a></li>
-  <li class="nav-item"><a class="nav-link" href="#ebook">E-book</a></li>
-  <li class="nav-item"><a class="nav-link" href="#habilidades">Habilidades</a></li>
-  <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
-</ul>
-<!-- ...existing code... -->
-      </div>
+  <!-- NAVBAR ESTILO EDITORIAL -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">HARI MANTOVAM</a>
+      <ul class="nav-links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#jornada">Minha Trajetória</a></li>
+        <li><a href="#para-quem">Perfil</a></li>
+        <li><a href="#pilares">Pilares</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </div>
   </nav>
 
-  <!-- Seção Hero / Apresentação -->
-  <section id="home" class="apresent">
-    <div class="img-port">
-      <img src="img/hm.png" alt="Criadora do site Hariadiny Mantovam" class="profile-pic">
+  <!-- HERO BANNER FULL-WIDTH (ESTILO CLARA DUVAL) -->
+  <header class="hero-banner" id="sobre">
+    <div class="hero-bg-container">
+      <img src="img/BACK.png" alt="Hari Mantovam" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
     </div>
-    <div class="apresent-text">
-      <p id="p1">Olá, sou a Hari</p>
-      <p id="p3">DESENVOLVEDORA</p>
-      <p id="p2">Contadora E</p>
-      <p id="p3">CONSULTORA FINANCEIRA</p>
-      <p id="p1">Transformo sua vida financeira e do seu negócio em automações simples e facilitadoras.</p>
-      <a href="mailto:hariadiny.mantovam@gmail.com">
-        <button type="button" class="btn-custom">Contate-me <i class="fa-solid fa-arrow-right"></i></button>
-      </a>
-
-    </div>
-  </section>
-
-<!-- Seção Projetos -->
-<section id="projetos">
-  <h1 class="mt-4 parallax-title">O QUE OFEREÇO</h1>
-
-  <div class="projects-grid">
-    <article class="project-card">
-      <img src="img/projeto1.gif" alt="Projeto Consulta financeira">
-      <div class="project-body">
-        <h3>Consulta financeira</h3>
-        <p>Auxilio em finanças, investimentos, quitação de dívidas, organização financeira e automações. Pessoal e Empresarial.</p>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <img src="img/Gravando 2025-08-10 124617.gif" alt="Criação de Sites">
-      <div class="project-body">
-        <h3>Criação de Sites para seu negócio</h3>
-        <p>Ideal para escalonar seu negócio e se posicionar na web.</p>
-      </div>
-    </article>
-
-    <article class="project-card">
-      <img src="img/projeto3.gif" alt="Análise de Demonstrações Financeiras">
-      <div class="project-body">
-        <h3>Análise de Demonstrações Financeiras</h3>
-        <p>Relatório de análise de empresas, auxílio dos indicadores financeiros, patrimoniais, econômicos e dentre outros</p>
-      </div>
-    </article>
-  </div>
-</section>
-<!-- ...existing code... -->
-
-<!-- Seção Como Funciona -->
-<section id="como-funciona">
-  <h1 class="mt-4 parallax-title">COMO FUNCIONA MEU TRABALHO</h1>
-  
-  <div class="process-circuit">
-    <div class="circuit-step step-1">
-      <div class="step-icon">
-        <i class="fa-solid fa-video"></i>
-      </div>
-      <h3>Videoconferência</h3>
-      <p>Conhecendo sua necessidade</p>
-    </div>
-
-    <div class="circuit-line line-1"></div>
-
-    <div class="circuit-step step-2">
-      <div class="step-icon">
-        <i class="fa-solid fa-toolbox"></i>
-      </div>
-      <h3>Ferramentas</h3>
-      <p>Preparando soluções</p>
-    </div>
-
-    <div class="circuit-line line-2"></div>
-
-    <div class="circuit-step step-3">
-      <div class="step-icon">
-        <i class="fa-solid fa-chart-line"></i>
-      </div>
-      <h3>Acompanhamento</h3>
-      <p>Monitorando progresso</p>
-    </div>
-
-    <div class="circuit-line line-3"></div>
-
-    <div class="circuit-step step-4">
-      <div class="step-icon">
-        <i class="fa-solid fa-cogs"></i>
-      </div>
-      <h3>Ajustes</h3>
-      <p>Otimizando processos</p>
-    </div>
-
-    <div class="circuit-line line-4"></div>
-
-    <div class="circuit-step step-5">
-      <div class="step-icon">
-        <i class="fa-solid fa-trophy"></i>
-      </div>
-      <h3>Resultados</h3>
-      <p>Transformação completa</p>
-    </div>
-  </div>
-</section>
-
-<!-- Seção E-book -->
-<section id="ebook">
-  <div class="ebook-container">
-    <div class="ebook-content">
-      <h2 class="ebook-title">Meu E-book</h2>
-      <p class="ebook-subtitle">Propósito de Vida e Inspirações</p>
+    
+    <div class="hero-banner-content">
+      <span class="badge-tag">
+        <i data-lucide="building-2"></i> Contabilidade • Consultoria Estratégica
+      </span>
+      <h1 class="hero-title">Da planilha bagunçada à decisão certa: contabilidade que dá clareza ao seu negócio.</h1>
+      <p class="hero-subtitle">
+        Soluções em gestão contábil, planejamento financeiro e estruturação estratégica para empresas no <strong>Brasil</strong> — e em breve, consultoria especializada para expansão em <strong>Portugal</strong>.
+      </p>
       
-      <div class="ebook-box">
-        <div class="ebook-image">
-          <i class="fa-solid fa-book"></i>
-        </div>
+      <div class="hero-actions">
+        <a href="#servicos" class="btn btn-primary btn-lg">
+          Conhecer Serviços Contábeis <i data-lucide="arrow-right"></i>
+        </a>
+        <a href="#contato" class="btn btn-outline btn-lg">
+          Falar Conosco <i data-lucide="message-square"></i>
+        </a>
         
-        <div class="ebook-description">
-          <h3>Transformação Financeira através do Propósito</h3>
-          <p>Descubra como alinhar seu propósito de vida com uma saúde financeira madura e equilibrada. Este e-book traz inspirações práticas e reflexões profundas para te guiar em uma jornada de transformação pessoal e financeira.</p>
-          
-          <ul class="ebook-features">
-            <li><i class="fa-solid fa-check"></i> Guia completo para encontrar seu propósito</li>
-            <li><i class="fa-solid fa-check"></i> Estratégias de educação financeira</li>
-            <li><i class="fa-solid fa-check"></i> Inspirações de vida real</li>
-            <li><i class="fa-solid fa-check"></i> Ações práticas e exercícios</li>
+      </div>
+    </div>
+  </header>
+
+  <!-- CARROSSEL DE PROVA SOCIAL / FERRAMENTAS -->
+<section class="logos-carousel-section">
+  <div class="carousel-label">Sistemas, Tecnologias & Conformidade:</div>
+  <div class="logos-track">
+    <!-- Repetimos a lista duas vezes para o efeito infinito e suave no CSS -->
+    <div class="logos-slide">
+      <span>DOMÍNIO SISTEMAS</span>
+      <span class="dot">•</span>
+      <span>CONTA AZUL</span>
+      <span class="dot">•</span>
+      <span>OMIE</span>
+      <span class="dot">•</span>
+      <span>POWER BI</span>
+      <span class="dot">•</span>
+      <span>MOLONI</span>
+      <span class="dot">•</span>
+      <span>RECEITA FEDERAL</span>
+      <span class="dot">•</span>
+      <span>AT PORTUGAL</span>
+      <span class="dot">•</span>
+    </div>
+    <div class="logos-slide">
+      <span>DOMÍNIO SISTEMAS</span>
+      <span class="dot">•</span>
+      <span>CONTA AZUL</span>
+      <span class="dot">•</span>
+      <span>OMIE</span>
+      <span class="dot">•</span>
+      <span>POWER BI</span>
+      <span class="dot">•</span>
+      <span>MOLONI</span>
+      <span class="dot">•</span>
+      <span>RECEITA FEDERAL</span>
+      <span class="dot">•</span>
+      <span>AT PORTUGAL</span>
+      <span class="dot">•</span>
+    </div>
+  </div>
+</section>
+
+  <main class="main-content">
+
+    <!-- SEÇÃO STORYTELLING / TRAJETÓRIA -->
+    <!-- SEÇÃO SOBRE A PROFISSIONAL / TRAJETÓRIA -->
+    <section class="storytelling-section" id="jornada">
+      <div class="section-divider">
+        <span>A Trajetória & Qualificação Profissional</span>
+      </div>
+
+      <div class="storytelling-card">
+        
+        <!-- ESPAÇO PARA A PEQUENA IMAGEM DA PROFISSIONAL -->
+        <div class="storytelling-image-frame">
+          <img src="img/hm.png" alt="Hari Mantovam - Perfil Profissional" class="storytelling-img" />
+        </div>
+
+        <!-- CONTEÚDO DE TEXTO -->
+        <div class="storytelling-content">
+          <div class="storytelling-header">
+            <span class="storytelling-tag"><i data-lucide="award"></i> Experiência, Rigor Técnico & Tecnologia</span>
+            <h2 class="storytelling-title">Precisão técnica fundamentada na prática e na inovação</h2>
+          </div>
+
+          <div class="storytelling-body">
+            <p>
+              Com formação acadêmica sólida e vivência prática em cenários de alta complexidade, construí uma carreira pautada pelo rigor analítico, conformidade e inteligência de negócios. Graduada em <strong>Contabilidade pela UNESPAR</strong> e pós-graduada em <strong>Auditoria e Perícia Contábil</strong>, trago em minha bagagem uma visão estratégica refinada para a solução de desafios financeiros e fiscais.
+            </p>
+            
+            <p>
+              Atuei durante <strong>2 anos como Perita Judicial no Tribunal de Justiça do Estado do Paraná (TJPR)</strong>, experiência que consolidou minha capacidade de análise minuciosa, diagnóstico preciso de dados e conformidade legal estrita. Na esfera corporativa, atuei como <strong>Analista Contábil na Coamo</strong> — uma das maiores multinacionais do agronegócio no Brasil —, vivenciando de perto a rotina de processos em grande escala, compliance tributário e estruturas financeiras robustas.
+            </p>
+
+            <p>
+              Com mais de <strong>5 anos de experiência nas áreas contábil e fiscal</strong>, uno o conhecimento tradicional do setor a uma forte facilidade e afinidade com <strong>Tecnologia da Informação (TI)</strong>. Essa combinação permite integrar sistemas modernos, automatizar processos e entregar um atendimento consultivo ágil, seguro e orientado à tomada de decisão para negócios no Brasil e em expansão para Portugal.
+            </p>
+
+            <blockquote class="storytelling-quote">
+              "A união entre a precisão da perícia, a maturidade da contabilidade corporativa e a agilidade da tecnologia a serviço do crescimento sustentável do seu negócio."
+            </blockquote>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+        
+    </section>
+
+    <!-- SEÇÃO PARA QUEM É / PARA QUEM NÃO É -->
+    <section class="qualification-section" id="para-quem">
+      <div class="section-divider">
+        <span>Alinhamento & Perfil de Atendimento</span>
+      </div>
+
+      <div class="qualification-grid">
+        <!-- PARA QUEM É -->
+        <div class="qualification-card is-for">
+          <div class="qualification-header">
+            <span class="qualification-badge"><i data-lucide="check"></i> Ideal Para Seu Negócio</span>
+            <h3>É para você se:</h3>
+          </div>
+          <ul class="qualification-list">
+            <li>
+              <i data-lucide="check-circle-2" class="list-icon"></i>
+              <span>Busca uma parceria contábil estratégica e próxima, indo além da simples emissão de guias de impostos.</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle-2" class="list-icon"></i>
+              <span>Deseja clareza total sobre a saúde financeira e lucratividade real da sua empresa.</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle-2" class="list-icon"></i>
+              <span>Quer organizar processos, otimizar a carga tributária dentro da lei e evitar passivos futuros.</span>
+            </li>
+            <li>
+              <i data-lucide="check-circle-2" class="list-icon"></i>
+              <span>Planeja expandir sua atuação ou estruturar operações entre o mercado brasileiro e o europeu (Portugal).</span>
+            </li>
           </ul>
-          
-          <a href="https://pay.hotmart.com/J103217842M" target="_blank" rel="noopener" class="btn-ebook">
-            <i class="fa-solid fa-shopping-cart"></i> Adquirir Meu E-book
+        </div>
+
+        <!-- PARA QUEM NÃO É -->
+        <div class="qualification-card is-not">
+          <div class="qualification-header">
+            <span class="qualification-badge"><i data-lucide="x"></i> Fora de Escopo</span>
+            <h3>Não é para você se:</h3>
+          </div>
+          <ul class="qualification-list">
+            <li>
+              <i data-lucide="x-circle" class="list-icon"></i>
+              <span>Procura apenas um serviço contábil genérico de "baixo custo" sem atendimento consultivo individualizado.</span>
+            </li>
+            <li>
+              <i data-lucide="x-circle" class="list-icon"></i>
+              <span>Não está disposto a manter a organização dos documentos e o alinhamento de informações financeiras.</span>
+            </li>
+            <li>
+              <i data-lucide="x-circle" class="list-icon"></i>
+              <span>Busca atalhos ou práticas fora das normas legais e tributárias vigentes.</span>
+            </li>
+            <li>
+              <i data-lucide="x-circle" class="list-icon"></i>
+              <span>Prefere uma gestão informal e sem acompanhamento constante de resultados.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILARES DA GESTÃO CONTÁBIL -->
+    <section class="editorial-grid-section" id="pilares">
+      <div class="section-divider">
+        <span>Pilares da Gestão Contábil & Estratégica</span>
+      </div>
+
+      <div class="editorial-grid">
+
+        <!-- 01 Planejamento Tributário -->
+        <article class="editorial-card">
+          <div class="card-image-frame">
+            <div class="image-placeholder">
+              <i data-lucide="calculator" class="placeholder-icon"></i>
+              <span>Eficiência</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-number">01</span>
+            <h3 class="card-title">Gestão Tributária</h3>
+            <p class="card-desc">Análise minuciosa para escolha do melhor regime fiscal, minimizando custos de forma legal e inteligente.</p>
+          </div>
+        </article>
+
+        <!-- 02 Organização Financeira -->
+        <article class="editorial-card">
+          <div class="card-image-frame">
+            <div class="image-placeholder">
+              <i data-lucide="trending-up" class="placeholder-icon"></i>
+              <span>Controle</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-number">02</span>
+            <h3 class="card-title">Fluxo & Finanças</h3>
+            <p class="card-desc">Sistemas práticos de acompanhamento financeiro, relatórios claros e previsibilidade de caixa para sua empresa.</p>
+          </div>
+        </article>
+
+        <!-- 03 Conformidade & Processos -->
+        <article class="editorial-card">
+          <div class="card-image-frame">
+            <div class="image-placeholder">
+              <i data-lucide="file-check" class="placeholder-icon"></i>
+              <span>Segurança</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-number">03</span>
+            <h3 class="card-title">Conformidade Legal</h3>
+            <p class="card-desc">Cumprimento rigoroso das obrigações acessórias e proteção patrimonial com total transparência.</p>
+          </div>
+        </article>
+
+        <!-- 04 Expansão Internacional -->
+        <article class="editorial-card">
+          <div class="card-image-frame">
+            <div class="image-placeholder">
+              <i data-lucide="globe-2" class="placeholder-icon"></i>
+              <span>Em Breve</span>
+            </div>
+          </div>
+          <div class="card-content">
+            <span class="card-number">04</span>
+            <h3 class="card-title">Conexão BR / PT</h3>
+            <p class="card-desc">Orientação e suporte contábil estratégico para empreendedores em transição e negócios no eixo Brasil-Portugal.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SERVIÇOS CONTÁBEIS -->
+    <section class="products-section" id="servicos">
+      <div class="section-divider">
+        <span>Soluções & Serviços Contábeis</span>
+      </div>
+
+      <div class="products-list">
+
+        <!-- Assessoria Contábil BR -->
+        <div class="product-item product-highlight">
+          <div class="product-meta">
+            <span class="product-tag"><i data-lucide="check-circle-2"></i> Atendimento Brasil</span>
+            <h3 class="product-title">Assessoria Contábil & Fiscal Contínua</h3>
+            <p class="product-desc">Gestão completa para micro e pequenas empresas no Brasil: apuração de impostos, balancetes e suporte consultivo.</p>
+          </div>
+          <a href="#contato" class="btn btn-primary">
+            Solicitar Proposta <i data-lucide="arrow-right"></i>
           </a>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="cta" class="cta-section">
-  <div class="cta-inner">
-    <div class="cta-badge">GRÁTIS</div>
-    <h2 class="cta-title">Contrate-me e receba o e-book + templates Notion</h2>
-    <p class="cta-text">Ao contratar meus serviços você ganha gratuitamente o e-book "Disciplina Estética: Métodos, Propósitos e Ações" e um kit de templates no Notion para organizar finanças, metas e automações. Transforme sua vida financeira com suporte prático e ferramentas prontas.</p>
-    <div class="cta-buttons">
-      <a href="mailto:hariadiny.mantovam@gmail.com?subject=Quero%20contratar%20seus%20serviços" class="btn btn-cta">Quero contratar</a>
-      <a href="#ebook" class="btn btn-outline-cta">Ver e-book</a>
-    </div>
-  </div>
-</section>
+        <!-- Consultoria Financeira -->
+        <div class="product-item">
+          <div class="product-meta">
+            <span class="product-tag">Consultoria Pessoal & Empresarial</span>
+            <h3 class="product-title">Diagnóstico & Reestruturação Financeira</h3>
+            <p class="product-desc">Análise profunda da saúde financeira da sua empresa com plano de ação prático para redução de custos e ganho de margem.</p>
+          </div>
+          <a href="#contato" class="btn btn-outline">
+            Agendar Reunião <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
 
-  <!-- Seção Contato -->
-  <section id="contato">
-    <h2>Deixe uma mensagem!</h2>
-    <form action="#" method="post" class="contact-form">
-      <div class="mb-3">
-        <label for="nome" class="form-label">Nome:</label>
-        <input type="text" class="form-control" id="nome" name="nome" required>
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">E-mail:</label>
-        <input type="email" class="form-control" id="email" name="email" required>
-      </div>
-      <div class="mb-3">
-        <label for="mensagem" class="form-label">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" class="form-control" rows="5" required></textarea>
-      </div>
-      <button type="submit" class="btn-custom">Enviar</button>
-    </form>
-  </section>
+        <!-- Mentoria Internacional / PT -->
+        <div class="product-item">
+          <div class="product-meta">
+            <span class="product-tag">Lançamento em Breve</span>
+            <h3 class="product-title">Consultoria para Expansão Brasil — Portugal</h3>
+            <p class="product-desc">Planejamento e estruturação contábil/financeira direcionada a profissionais e empresas na Europa.</p>
+          </div>
+          <a href="#contato" class="btn btn-outline">
+            Entrar na Lista VIP <i data-lucide="mail"></i>
+          </a>
+        </div>
 
-  <!-- Seção Redes Sociais / Footer -->
-  <footer class="footer-section">
-    <div class="social-links">
-      <a href="https://github.com/hariadiny-mantovam" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/hariadiny-mantovam/" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://instagram.com/seuusuario" target="_blank" rel="noopener" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="https://hariadinymantovam.substack.com/" target="_blank" rel="noopener" title="Substack"><i class="bi bi-substack"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer class="footer" id="contato">
+    <div class="footer-container">
+      <span class="footer-brand">HARI MANTOVAM</span>
+      <p>Contabilidade Estratégica • Brasil & Portugal</p>
+      <p style="margin-top: 8px; font-size: 0.72rem; color: #888;">© <span id="year"></span> • Todos os direitos reservados.</p>
     </div>
-    <p class="footer-text">&copy; 2025 Hariadiny Mantovam. Todos os direitos reservados.</p>
   </footer>
 
-  <!-- Diálogo Interativo -->
-  <div id="dialog-overlay" class="dialog-overlay"></div>
-  <div id="dialog-box" class="dialog-box">
-    <p></p>
-    <button id="next-dialog" class="btn btn-primary">Fechar</button>
-  </div>
-
-  <!-- Estrelas de fundo -->
-  <div class="star" style="top:10%; left:20%;"></div>
-  <div class="star" style="top:80%; left:10%;"></div>
-  <div class="star" style="top:60%; left:15%;"></div>
-  <div class="star" style="top:70%; left:25%;"></div>
-  <div class="star" style="top:70%; right:25%;"></div>
-  <div class="star" style="top:50%; right:15%;"></div>
-  <div class="star" style="top:80%; right:15%;"></div>
-  <div class="star" style="top:20%; right:30%;"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
