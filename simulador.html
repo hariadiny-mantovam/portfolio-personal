@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Simulador de Impacto da Reforma Tributária | Hari Mantovam</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .simulator-container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    }
+    .form-group {
+      margin-bottom: 24px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+    .form-control {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid var(--border-light);
+      background: var(--bg-main);
+      font-family: var(--font-sans);
+      font-size: 1rem;
+      color: var(--text-main);
+      transition: border-color 0.2s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--gold-accent);
+    }
+    .sim-result-box {
+      margin-top: 32px;
+      padding: 24px;
+      background: var(--bg-accent);
+      border: 1px solid var(--border-light);
+      display: none;
+    }
+    .sim-result-title {
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
+    .result-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px dashed var(--border-light);
+      font-size: 0.95rem;
+    }
+    .result-row.highlight {
+      border-bottom: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--gold-accent);
+      padding-top: 16px;
+    }
+    .cta-box {
+      margin-top: 32px;
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-light);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">HARI MANTOVAM</a>
+      <a href="index.html" class="btn btn-outline" style="font-size: 0.75rem;">
+        <i data-lucide="arrow-left"></i> Voltar ao Site
+      </a>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <div class="simulator-container">
+      <span class="badge-tag">
+        <i data-lucide="calculator"></i> Diagnóstico Prévia Fiscal
+      </span>
+      <h1 class="hero-title" style="font-size: 2.2rem; margin-bottom: 12px;">Simulador de Impacto Tributário Médico</h1>
+      <p class="hero-subtitle" style="font-size: 0.98rem; margin-bottom: 32px; text-align: left;">
+        Insira o faturamento mensal estimado da sua clínica ou consultório PJ para visualizar uma estimativa comparativa da carga tributária atual (Simples/Presumido) versus o novo modelo da Reforma Tributária (IBS/CBS com desconto do setor de saúde).
+      </p>
+
+      <form id="tax-simulator-form">
+        <div class="form-group">
+          <label for="monthly-revenue">Faturamento Mensal Estimado (R$):</label>
+          <input type="number" id="monthly-revenue" class="form-control" placeholder="Ex: 50000" required min="1000" step="1000" />
+        </div>
+
+        <div class="form-group">
+          <label for="business-model">Modelo de Atuação Atual:</label>
+          <select id="business-model" class="form-control" required>
+            <option value="simples">Médico PJ / Consultório (Simples Nacional - Anexo III / Fator R)</option>
+            <option value="presumido">Clínica Médica (Lucro Presumido - Padrão ~13,33% a 16,33%)</option>
+            <option value="hospitalar">Clínica com Equiparação Hospitalar (Presumido ~8% a 10%)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center;">
+          <i data-lucide="cpu"></i> Calcular Impacto Estimado
+        </button>
+      </form>
+
+      <!-- RESULTADO DA SIMULAÇÃO -->
+      <div id="sim-result" class="sim-result-box">
+        <h3 class="sim-result-title">Resultado do Diagnóstico Prévio</h3>
+        
+        <div class="result-row">
+          <span>Estimativa de Imposto Atual (Mensal):</span>
+          <strong id="res-current">R$ 0,00</strong>
+        </div>
+
+        <div class="result-row">
+          <span>Estimativa com Novo IVA Saúde (60% Desconto IBS/CBS):</span>
+          <strong id="res-future">R$ 0,00</strong>
+        </div>
+
+        <div class="result-row highlight">
+          <span>Variação Estimada na Carga Fiscal:</span>
+          <strong id="res-diff">0%</strong>
+        </div>
+
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 16px; font-style: italic;">
+          *Nota: Este cálculo é uma simulação genérica simplificada baseada no texto base da regulamentação do IBS/CBS. A carga real depende da transição da folha, aproveitamento de créditos e modelo societário.
+        </p>
+
+        <!-- CHAMADA DIRETIVA PARA O WHATSAPP -->
+        <div class="cta-box">
+          <h4 style="font-family: var(--font-serif); font-size: 1.2rem; margin-bottom: 8px;">Deseja aprofundar estes números e blindar sua clínica?</h4>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 20px;">
+            Envie esta simulação diretamente para a Dra. Hari Mantovam e agende uma análise estratégica personalizada.
+          </p>
+          <a id="btn-whatsapp-deep" href="#" target="_blank" class="btn btn-primary btn-lg" style="width: 100%; justify-content: center; background-color: #25D366; border-color: #25D366; color: #fff;">
+            <i data-lucide="message-square"></i> Falar com a Especialista no WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <span class="footer-brand">HARI MANTOVAM</span>
+      <p>Contabilidade Médica Estratégica • Especialista em Clínicas & Saúde</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
